@@ -3,7 +3,7 @@ export USER="root"
 
 ### every exit != 0 fails the script
 set -e
-
+wget https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && cp chromedriver /usr/bin/
 
 sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --no-sandbox/g' /opt/google/chrome/google-chrome
 
